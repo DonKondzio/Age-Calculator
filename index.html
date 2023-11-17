@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/style.min.css" />
+    <script src="dist/js/main.min.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inputs">
+        <div class="input-container">
+          <label class="label">day</label>
+          <input
+            type="number"
+            class="input input-day"
+            min="1"
+            max="31"
+            placeholder="DD"
+          />
+          <span class="error-text">Must be a valid day</span>
+        </div>
+        <div class="input-container">
+          <label class="label">month</label>
+          <input
+            type="number"
+            class="input input-month"
+            min="1"
+            max="12"
+            placeholder="MM"
+          />
+          <span class="error-text">Must be a valid month</span>
+        </div>
+
+        <div class="input-container">
+          <label class="label">year</label>
+          <input
+            type="number"
+            class="input input-year"
+            min="1900"
+            max="2100"
+            placeholder="YYYY"
+          />
+          <span class="error-text">Must be in the past</span>
+        </div>
+      </div>
+
+      <div class="line-container">
+        <div class="line"></div>
+        <button class="arrow-btn">
+          <img class="arrow" src="./dist/img/icon-arrow.svg" alt="" />
+        </button>
+      </div>
+
+      <div class="output">
+        <p class="output-line years">
+          <span class="number years-number">--</span> years
+        </p>
+        <p class="output-line months">
+          <span class="number months-number">--</span> months
+        </p>
+        <p class="output-line days">
+          <span class="number days-number">--</span> days
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
