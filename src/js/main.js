@@ -12,6 +12,7 @@ let birthDate;
 let maxDayArr = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 const handleCalc = () => {
+  displayAge();
   if (checkIfNotEmpty()) {
     checkLeapYear();
     checkMonth();
@@ -110,14 +111,15 @@ const calcAge = () => {
   displayAge(yearsNumber, monthsNumber, daysNumber);
 };
 
-const displayAge = (years, months, days) => {
+const displayAge = (years = "--", months = "--", days = "--") => {
   yearsNumberSpan.textContent = years;
   monthsNumberSpan.textContent = months;
   daysNumberSpan.textContent = days;
 };
 
 const forceTwoDigits = (e) => {
-  e.target.value = e.target.value.padStart(2, "0");
+  if (e.target.value.length === 1)
+    e.target.value = e.target.value.padStart(2, "0");
 };
 
 arrowBtn.addEventListener("click", handleCalc);
